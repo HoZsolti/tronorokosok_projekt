@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Európa Jövőbeli Uralkodói</title>
+    <meta name="description" content="Interaktív térkép Európa trónörököseiről">
+    <meta name="author" content="Horváth Zsolt">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css" />
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">👑 Európa Z-generációs trónörökösei</a>
+            <ul class="nav-links">
+                <li><a href="#mapdesc" class="hover-underline-animation left">Térkép</a></li>
+                <li><a href="#quiz-section" class="hover-underline-animation left">Kvíz</a></li>
+                <li><a href="#contact" class="hover-underline-animation left">Kapcsolat</a></li>
+            </ul>
+            <div class="burger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="group-photo-container">
+            <h1 class="cím"> Ismerd meg a jövő uralkodóit! </h1>
+        </section>
+
+        <section id="mapdesc" class="hero">
+            <h2>Válassz egy országot a térképen!</h2>
+            <h3>Görgess lejjeb a teljes térkép megtekintéséhez.</h3>
+        </section>
+
+        <section class="map-wrapper">
+            <div class="interactive-map-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Blank_map_of_Europe_%28with_disputed_regions%29.svg/1280px-Blank_map_of_Europe_%28with_disputed_regions%29.svg.png"
+                    alt="Európa Térkép" class="map-bg">
+
+                <a href="pages/uk.html" class="map-pin" style="top: 58%; left: 33%;" title="Egyesült Királyság">
+                    <span class="fi fi-gb zaszlo"></span>
+                </a>
+
+                <a href="pages/esp.html" class="map-pin" style="top: 86.5%; left: 26.5%;" title="Spanyolország">
+                    <span class="fi fi-es zaszlo"></span>
+                </a>
+
+                <a href="pages/bel.html" class="map-pin" style="top: 64%; left: 39%;" title="Belgium">
+                    <span class="fi fi-be zaszlo"></span>
+                </a>
+
+                <a href="pages/nl.html" class="map-pin" style="top: 59%; left: 41%;" title="Hollandia">
+                    <span class="fi fi-nl zaszlo"></span>
+                </a>
+
+                <a href="pages/dk.html" class="map-pin" style="top: 51%; left: 47%;" title="Dánia">
+                    <span class="fi fi-dk zaszlo"></span>
+                </a>
+
+                <a href="pages/nor.html" class="map-pin" style="top: 41%; left: 46%;" title="Norvégia">
+                    <span class="fi fi-no zaszlo"></span>
+                </a>
+
+                <a href="pages/swe.html" class="map-pin" style="top: 42%; left: 52%;" title="Svédország">
+                    <span class="fi fi-se zaszlo"></span>
+                </a>
+
+                <a href="pages/omm.html" class="map-pin" style="top: 70%; left: 52%;" title="Ausztria-Magyarország">
+                    <img src="images/omm.svg" alt="OMM Zászló" class="map-pin-img">
+                </a>
+
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="quiz-section" class="section-box">
+            <h2>🤴👸 Mennyire ismered őket? (Minikvíz)</h2>
+            <div id="quiz-container">
+                <p class="question">1. Hogy hívják Spanyolország trónörökösének édesanyját?</p>
+                <label><input type="radio" name="q1" value="a"> Máxima</label>
+                <label><input type="radio" name="q1" value="b"> Letícia</label>
+
+                <p class="question">2. Melyik két nemzet uralkodói tartoznak a Glücksburg-házba?</p>
+                <label><input type="radio" name="q2" value="a"> Dánia és Norvégia</label>
+                <label><input type="radio" name="q2" value="b"> Svédország és Dánia</label>
+                <label><input type="radio" name="q2" value="b"> Norvágia és Svédország</label>
+
+                <label for="Válasz" class="question">3. Hány éves kortól uralkodhatnak önállóan?
+                    <input type="number" id="q3" style="max-width: 100px;"></label>
+                <button id="quiz-btn">Ellenőrzés</button>
+                <p id="quiz-result" style="margin-top:10px; font-weight:bold;"></p>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="contact" class="section-box">
+            <h2>📩 Kiselőadás foglalása</h2>
+            <form id="royalForm" novalidate>
+                <div class="form-group">
+                    <label for="name">Név:</label>
+                    <input type="text" id="name" autocomplete="name">
+                    <span class="error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" autocomplete="email">
+                    <span class="error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Telefonszám (opcionális)</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Például: +36 30 123 4567" autocomplete="tel">
+                    <span class="error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Korod:</label>
+                    <input type="number" id="age" min="0">
+                    <span class="error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="country">Országod:</label>
+                    <select id="country" autocomplete="country">
+                        <option value="">Válassz...</option>
+                        <option value="hu">Magyarország</option>
+                        <option value="ro">Románia</option>
+                        <option value="sk">Szlovákia</option>
+                        <option value="other">Egyéb</option>
+                    </select>
+                    <span class="error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Látogatás dátuma:</label>
+                    <input type="date" id="date">
+                    <span class="error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="favourite">Kedvenc:</label>
+                    <select id="favourite">
+                        <option value="">Válassz...</option>
+                        <option value="bel">Erzsébet hercegnő</option>
+                        <option value="swe">Esztella hercegnő</option>
+                        <option value="uk">György herceg</option>
+                        <option value="nor">Ingrid Alexandra hercegnő</option>
+                        <option value="nl">Katalin Amália hercegnő</option>
+                        <option value="dk">Keresztély herceg</option>
+                        <option value="esp">Leonóra hercegnő</option>
+                    </select>
+                    <span class="error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="note">Megjegyzések</label>
+                    <textarea id="note" name="note" rows="4"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <input type="checkbox" id="terms" style="width: auto;">
+                    <label for="terms" style="display: inline;">Elfogadom az adatkezelést</label>
+                    <span class="error"></span>
+                </div>
+
+
+                <button type="submit">Küldés</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Horváth Zsolt | Minden jog fenntartva.</p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>
